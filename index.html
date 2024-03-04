@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in</title>
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        function submitForm() {
+            
+            var name = document.getElementById("name").value;
+            var dob = document.getElementById("dob").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+
+            
+            if (name === "" || dob === "" || phone === "" || address === "") {
+                alert("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+
+            
+            window.location.href = "questions.html";
+        }
+    </script>
+</head>
+<body>
+    <h1>PTIT Exam</h1>
+    <form>
+        <label for="name">Tên:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="dob">Ngày sinh:</label>
+        <input type="date" id="dob" required><br>
+
+        <label for="phone">CCCD:</label>
+        <input type="tel" id="phone" required><br>
+
+        <label for="address">Địa chỉ:</label>
+        <textarea id="address" rows="4" required></textarea><br>
+
+        <input type="button" value="Tiếp tục" onclick="submitForm()">
+    </form>
+</body>
+</html>
